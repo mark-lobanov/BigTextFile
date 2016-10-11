@@ -1,5 +1,4 @@
 *.~*
-*.res
 *.zip
 *.doc*
 *.stat
@@ -14,6 +13,8 @@
 /~backup/
 /__history/
 /__recovery/
+./Generator/*.res
+./Sorter/*.res
 ./Generator/__history/
 ./Generator/__recovery/
 ./Shared/__history/
