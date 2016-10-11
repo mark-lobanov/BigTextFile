@@ -23,7 +23,7 @@ type
   private
     testString : String;
     function LoadToStreamProc(Sorter: TABCStringSorter; const AStr: String): String;
-    procedure WriteToStreamProc(Sorter: TABCStringSorter; const AStr: String);
+    procedure WriteToStreamProc(Stream : TStream; Sorter: TABCStringSorter; const AStr: String);
   public
     procedure SetUp; override;
     procedure TearDown; override;
@@ -69,7 +69,7 @@ begin
   Result := ar[0] + '.' + Format( '%'+IntToStr(Sorter.Tag)+'s',[ar[1]] );
 end;
 
-procedure TestTABCStringSorter.WriteToStreamProc(Sorter: TABCStringSorter; const AStr: String);
+procedure TestTABCStringSorter.WriteToStreamProc(Stream : TStream; Sorter: TABCStringSorter; const AStr: String);
 var ar: TArray<String>;
     s : String;
 begin

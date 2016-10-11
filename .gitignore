@@ -1,5 +1,6 @@
 *.~*
 *.res
+*.zip
 *.doc*
 *.stat
 *.dproj

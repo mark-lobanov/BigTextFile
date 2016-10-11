@@ -45,7 +45,7 @@ end;
 
 function dupsFileName: String;
 begin
-  Result := ChangeFileExt(bigFilename, DUBS_NAME);
+  Result := ChangeFileExt(BIG_FILE_NAME, DUBS_NAME);
 end;
 
 
@@ -88,7 +88,7 @@ begin
   dupStrings.SaveToFile( dupsFileName );
 
   sb := TStringBuilder.Create( Round(STR_MAX_LEN * SizeOf(Char) * SB_STR_COUNT * 1.2) );
-  st := TBufferedFileStream.Create(bigFilename, fmCreate, FILE_BUFF_LEN);
+  st := TBufferedFileStream.Create(BIG_FILE_NAME, fmCreate, FILE_BUFF_LEN);
   try
     cnt := 1;
     repeat
